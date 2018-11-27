@@ -8,3 +8,8 @@ From parent folder, execute `helm template permissions-service` to render the te
 so try `helm template permissions-service -f env-config/dev-permissions-values.yaml --set database.read.user=a,database.write.user=b,database.read.password=c,database.write.password=d`
 
 Now render the umbrella chart `helm template permissions-service-umbrella -f env-config/dev-permissions-umbrella-values.yaml`
+
+Another way of expressing a dependencies is rather than using a pure umbrella chart, like above,
+your chart can have a conditional requirement.
+Look at permissions-service-2/requirements.yaml
+acl is only included if 'deployAcl' is true
