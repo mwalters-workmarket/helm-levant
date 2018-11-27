@@ -1,0 +1,29 @@
+permissions-service:
+  resources:
+    cpu: 1
+    memory: 1024
+
+  database:
+    read:
+      url: abc
+      user: xsrga
+      password: arehgs
+    write:
+      url: def
+      user: sdgs
+      password: erhaher
+
+acl-service:
+  resources:
+    cpu: 1
+    memory: 1024
+
+  database:
+    read:
+      url: abc
+      user: a
+      password: b
+    write:
+      user: d
+      password: a
+      url: def

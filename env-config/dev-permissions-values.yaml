@@ -1,0 +1,9 @@
+resources:
+  cpu: 1
+  memory: 1024
+
+database:
+  read:
+    url: abc
+  write:
+    url: def

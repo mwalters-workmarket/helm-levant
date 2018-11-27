@@ -1,0 +1,14 @@
+
+resources:
+  cpu:
+  memory:
+
+database:
+  read:
+    url:
+    user:
+    password:
+  write:
+    url:
+    user:
+    password:

@@ -1,0 +1,13 @@
+service:
+  name: acl-service
+  resources:
+    cpu: {{ required "A valid value for resources.cpu is required" .Values.resources.cpu }}
+    memory: {{ required "A valid value resources.memory is required" .Values.resources.memory }}
+  env:
+    READDB_URL: {{ required "A valid value for database.read.url is required" .Values.database.read.url }}
+    WRITEDB_URL: {{ required "A valid value for database.write.url is required" .Values.database.write.url }}
+  secret:
+    READDB_USER: {{ required "A valid value for database.read.user is required" .Values.database.read.user }}
+    READDB_PASSWORD: {{ required "A valid value for database.read.password is required" .Values.database.read.password }}
+    WRITEDB_USER: {{ required "A valid value for database.write.user is required" .Values.database.write.user }}
+    WRITEDB_PASSWORD: {{ required "A valid value for database.write.password is required" .Values.database.write.password }}

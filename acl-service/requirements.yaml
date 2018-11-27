@@ -1,0 +1,4 @@
+dependencies:
+  - name: mysql
+    version: 3.2.1
+    repository: http://another.example.com/charts
